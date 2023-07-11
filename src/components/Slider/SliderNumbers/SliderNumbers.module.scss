@@ -1,0 +1,25 @@
+@import 'styles/global';
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  gap: 88.92px;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) matrix(-0.71, 0.71, -0.71, -0.71, 0, 0);
+
+    width: 43.82px;
+    height: 2px;
+
+    background-color: $color-dash;
+  }
+
+  .slideNumber {
+    @include regular-text(24px, 24px, $color-subtext);
+  }
+}

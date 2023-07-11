@@ -1,0 +1,76 @@
+@import "styles/global";
+
+.form {
+  @include flex(column, flex-start, flex-start);
+  gap: 10px;
+
+  .error {
+    @include regular-text(12px, 100%, $color-text-danger);
+    margin-bottom: 5px;
+  }
+
+  .input {
+    @include regular-text(14px, 100%, $color-text);
+    width: 391px;
+    height: 46px;
+    padding: 15px 0 14px 21px;
+
+    letter-spacing: 0.56px;
+
+    background: $color-background-form;
+
+    &::placeholder {
+      @include regular-text(14px, 100%, $color-subtext);
+      letter-spacing: 0.56px;
+    }
+
+    @media screen and (max-width: $width-tablet-wide) {
+      width: 430px;
+    }
+
+    @media screen and (max-width: $width-mobile-wide) {
+      width: 100%;
+    }
+  }
+
+  .textarea {
+    resize: none;
+    height: 147px !important;
+  }
+
+  .checkbox {
+    @include flex(row, flex-start, center);
+    cursor: pointer;
+    gap: 16px;
+    margin: 12px 0 13px;
+
+    .customCheckbox {
+      @include flex(row, center, center);
+      width: 24px;
+      height: 23.262px;
+      background-color: $color-background-form;
+      border-radius: 4px;
+
+      svg {
+        visibility: hidden;
+      }
+    }
+
+    .checkboxInput {
+      display: none;
+
+      &:checked {
+        & ~ .customCheckbox svg {
+          visibility: visible;
+        }
+      }
+    }
+
+    .checkboxCaption {
+      @include regular-text(14px, 100%, $color-text);
+      width: 100%;
+      max-width: 331px;
+      letter-spacing: 0.42px;
+    }
+  }
+}

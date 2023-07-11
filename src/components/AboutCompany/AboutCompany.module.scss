@@ -1,0 +1,107 @@
+@import 'styles/global';
+
+.content {
+  @include flex(row, flex-end, flex-start);
+  position: relative;
+  margin-top: 120px;
+  padding: 30px 70px;
+  background-color: $color-background-second;
+
+  .picture {
+    position: absolute;
+    width: 270px;
+    background-size: cover;
+
+    @media screen and (max-width: $width-desk-wide) {
+      width: 202.5px;
+    }
+
+    @media screen and (max-width: $width-desk-narrow) {
+      width: 270px;
+    }
+
+    @media screen and (max-width: $width-tablet-wide) {
+      width: 202.5px;
+    }
+
+    @media screen and (max-width: $width-tablet-narrow) {
+      display: none;
+    }
+
+    &:nth-child(1) {
+      top: 30px;
+      left: 100px;
+      height: 265px;
+
+      @media screen and (max-width: $width-desk-wide) {
+        left: 50px;
+        height: 198.75px;
+      }
+
+      @media screen and (max-width: $width-desk-narrow) {
+        height: 265px;
+      }
+
+      @media screen and (max-width: $width-tablet-wide) {
+        height: 198.75px;
+      }
+    }
+
+    &:nth-child(2) {
+      top: 60px;
+      left: 400px;
+      height: 345px;
+
+      @media screen and (max-width: $width-desk-wide) {
+        left: 282.5px;
+        height: 258.75px;
+      }
+
+      @media screen and (max-width: $width-desk-narrow) {
+        display: none;
+      }
+    }
+
+    &:nth-child(3) {
+      top: 325px;
+      left: 100px;
+      height: 140px;
+
+      @media screen and (max-width: $width-desk-wide) {
+        top: 258.75px;
+        left: 50px;
+        height: 105px;
+      }
+
+      @media screen and (max-width: $width-desk-narrow) {
+        top: 325px;
+        height: 140px;
+      }
+
+      @media screen and (max-width: $width-tablet-wide) {
+        top: 258.75px;
+        height: 105px;
+      }
+    }
+  }
+
+  .info {
+    @include flex(column, flex-start, flex-start);
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+
+    .title {
+      @include light-text(64px, 64px, $color-subtext);
+    }
+
+    .text {
+      @include light-text(16px, 25px, $color-black);
+    }
+  }
+
+  @media screen and (max-width: $width-tablet-narrow) {
+    justify-content: center;
+    padding: 30px 10px;
+  }
+}

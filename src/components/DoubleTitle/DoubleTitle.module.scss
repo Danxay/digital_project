@@ -1,0 +1,15 @@
+@import "styles/global";
+
+.title {
+  display: inline-flex;
+  flex-direction: column;
+  text-transform: uppercase;
+
+  span:nth-child(1) {
+    @include light-text(64px, 64px, $color-subtext);
+  }
+
+  span:nth-child(2) {
+    @include bold-text(64px, 64px, $color-text);
+  }
+}

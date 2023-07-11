@@ -1,0 +1,11 @@
+@import "styles/global";
+
+.wrapper {
+  @include flex(row, flex-start, center);
+  flex-wrap: wrap;
+  gap: 26.1px;
+
+  @media screen and (max-width: $width-mobile-wide) {
+    justify-content: center;
+  }
+}

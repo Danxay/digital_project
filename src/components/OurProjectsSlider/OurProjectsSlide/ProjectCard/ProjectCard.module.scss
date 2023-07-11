@@ -1,0 +1,72 @@
+@import "styles/global";
+
+.wrapper {
+  @include flex(row, flex-start, center);
+  max-width: 100%;
+
+  background-color: $color-background-second;
+
+  .preview {
+    width: 100% !important;
+    max-width: 57.26%;
+    object-position: center;
+    object-fit: cover;
+
+    @media screen and (max-width: $width-desk-narrow) {
+      max-width: 100%;
+      height: auto !important;
+    }
+  }
+
+  .info {
+    padding: 30px;
+    max-width: 42.74%;
+
+    .title {
+      @include light-text(40px, normal, $color-subtext);
+
+      overflow: clip;
+      display: -webkit-box;
+
+      text-overflow: ellipsis;
+      overflow-wrap: anywhere;
+
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+
+      @media screen and (max-width: $width-mobile-wide) {
+        font-size: 30px;
+      }
+    }
+
+    .description {
+      @include light-text(16px, 25px, $color-black);
+      margin: 20px 0 64px;
+
+      overflow: clip;
+      display: -webkit-box;
+
+      text-overflow: ellipsis;
+      overflow-wrap: anywhere;
+
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      line-clamp: 5;
+    }
+
+    .btn {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: $width-desk-narrow) {
+      max-width: 100%;
+
+      padding: 15px;
+    }
+  }
+
+  @media screen and (max-width: $width-desk-narrow) {
+    flex-direction: column;
+  }
+}

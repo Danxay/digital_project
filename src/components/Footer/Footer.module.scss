@@ -1,0 +1,132 @@
+@import 'styles/global';
+
+.wrapper {
+  background-color: $color-background-dark;
+
+  :global(.container) {
+    max-width: 1208px;
+  }
+
+  .content {
+    display: grid;
+    grid-template: "logo info address socials" auto / 20.2% 21.524% 34.439% 22.27%;
+    gap: 5px;
+    padding: 58px 0 60px;
+
+    .subtitle {
+      @include bold-text(16px, 20px, $color-white);
+      margin-bottom: 25px;
+    }
+
+    .link {
+      @include medium-text(14px, 24px, $color-white);
+      letter-spacing: 0.42px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-subtext;
+      }
+    }
+
+    .logo {
+      grid-area: logo;
+    }
+
+    .info {
+      grid-area: info;
+
+      .navList {
+        @include flex(column, flex-start, flex-start);
+        gap: 16px;
+        list-style: none;
+      }
+    }
+
+    .address {
+      grid-area: address;
+
+      .contacts {
+        @include flex(column, flex-start, flex-start);
+        gap: 32px;
+
+        .contact {
+          svg {
+            margin-left: 1px;
+          }
+
+          &:nth-child(1) {
+            svg {
+              width: 11px;
+              height: 16px;
+              margin-right: 19px;
+            }
+          }
+
+          &:nth-child(2) {
+            svg {
+              width: 16.01px;
+              height: 16px;
+              margin-right: 13.99px;
+            }
+          }
+
+          &:nth-child(3) {
+            svg {
+              width: 16px;
+              height: 11px;
+              margin: 5px 14px 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    .socials {
+      grid-area: socials;
+
+      .links {
+        @include flex(row, flex-start, flex-end);
+        gap: 40px;
+
+        .icon {
+          path {
+            transition: fill 0.3s;
+          }
+
+          &:hover path {
+            fill: $color-subtext;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $width-tablet-wide) {
+      grid-template:
+              "logo info"
+              "address address"
+              "socials socials" auto / 1fr 1fr;
+      gap: 30px;
+    }
+
+    @media screen and (max-width: $width-mobile-narrow) {
+      grid-template: "logo" "info" "address" "socials" auto / 1fr;
+    }
+  }
+
+  .line {
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: 1px;
+
+    opacity: 0.1;
+    background-color: $color-white;
+  }
+
+  .copyright {
+    @include opensans-regular-text(12px, 22px, $color-signature);
+    padding: 24px 0;
+    text-align: center;
+  }
+}
+

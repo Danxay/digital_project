@@ -1,0 +1,26 @@
+@import 'styles/global';
+
+.content {
+  margin-top: 120px;
+
+  .title {
+    @include light-text(64px, 64px, $color-subtext);
+  }
+
+  .items {
+    @include flex(row, center, flex-start);
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 60px 0 30px;
+
+    .item {
+      @media screen and (max-width: $width-tablet-narrow) {
+        width: 100%;
+      }
+    }
+  }
+
+  .btn {
+    @include flex(row, flex-end, flex-start);
+  }
+}

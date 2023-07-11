@@ -1,0 +1,88 @@
+@import 'styles/global';
+
+.project {
+  @include flex(row, space-between, flex-start);
+
+  gap: 15px;
+
+  .info {
+    @include flex(column, flex-start, flex-start);
+    gap: 90px;
+
+    min-width: 34.19%;
+    max-width: 50%;
+    padding-top: 333px;
+
+    overflow-wrap: anywhere;
+
+    @media screen and (max-width: $width-desk-wide) {
+      gap: 80px;
+      padding-top: 283px;
+    }
+
+    @media screen and (max-width: $width-desk-narrow) {
+      gap: 70px;
+      padding-top: 233px;
+    }
+
+    @media screen and (max-width: $width-tablet-wide) {
+      gap: 60px;
+      padding-top: 183px;
+    }
+
+    @media screen and (max-width: $width-tablet-narrow) {
+      gap: 50px;
+      padding-top: 83px;
+    }
+
+    @media screen and (max-width: 620px) {
+      gap: 35px;
+      align-items: center;
+
+      min-width: 0;
+      max-width: 100%;
+      padding-top: 0;
+    }
+  }
+
+  .picture {
+    @include flex(row, flex-start, center);
+    width: 100%;
+    max-width: 770px;
+    min-height: 829px;
+
+    @media screen and (max-width: $width-desk-wide) {
+      max-width: 670px;
+      min-height: 729px;
+    }
+
+    @media screen and (max-width: $width-desk-narrow) {
+      max-width: 570px;
+      min-height: 629px;
+    }
+
+    @media screen and (max-width: $width-tablet-wide) {
+      max-width: 520px;
+      min-height: 579px;
+    }
+
+    @media screen and (max-width: $width-tablet-narrow) {
+      max-width: 370px;
+      min-height: 429px;
+    }
+
+    @media screen and (max-width: 620px) {
+      max-width: 75%;
+      min-height: 329px;
+    }
+
+    @media screen and (max-width: $width-mobile-wide) {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}

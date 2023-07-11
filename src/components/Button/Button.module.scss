@@ -1,0 +1,74 @@
+@import 'styles/global';
+
+.btn {
+  @include regular-text(12px, 12px, $color-text);
+
+  cursor: pointer;
+
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+
+  padding: 24px 49.66px 23px 50.34px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  transition: background-color 0.3s ease, color 0.3s ease, filter 0.3s;
+
+  &:disabled {
+    cursor: default;
+    filter: brightness(40%);
+  }
+
+  &.light {
+    color: $color-text;
+    background-color: $color-white;
+
+    svg path {
+      fill: $color-text;
+      transition: fill 0.3s ease;
+    }
+  }
+
+  &.dark {
+    color: $color-white;
+    background-color: $color-text;
+
+    svg path {
+      fill: $color-white;
+      transition: fill 0.3s ease;
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s, scale 0.3s;
+  }
+
+  &:not(:disabled) {
+    &.light:hover {
+      color: $color-white;
+      background-color: $color-text;
+
+      svg path {
+        fill: $color-white;
+      }
+    }
+
+    &.dark:hover {
+      color: $color-text;
+      background-color: $color-white;
+
+      svg path {
+        fill: $color-text;
+      }
+    }
+
+    &:hover svg {
+      transform: translateX(-25%);
+      scale: 1.2;
+    }
+  }
+}

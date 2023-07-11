@@ -1,0 +1,27 @@
+@import "styles/global";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+
+  .text {
+    @include light-text(16px, 25px, $color-black);
+  }
+
+  .imageWrapper {
+    .image {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    &.imageLarge {
+      grid-column: span 2;
+    }
+  }
+
+  @media screen and (max-width: $width-tablet-narrow) {
+    @include flex(column, flex-start, center);
+  }
+}

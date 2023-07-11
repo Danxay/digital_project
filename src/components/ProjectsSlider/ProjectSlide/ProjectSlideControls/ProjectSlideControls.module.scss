@@ -1,0 +1,23 @@
+@import "styles/global";
+
+.buttons {
+  position: relative;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+
+    width: 30vw;
+    height: 1px;
+
+    background-color: $color-border;
+
+    @media screen and (max-width: 620px) {
+      display: none;
+    }
+  }
+}

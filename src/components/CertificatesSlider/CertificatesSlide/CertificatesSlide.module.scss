@@ -1,0 +1,32 @@
+@import "styles/global";
+
+.certificates {
+  @include flex(row, flex-start, flex-start);
+  flex-wrap: wrap;
+  gap: 15px 78px;
+  width: 100%;
+  padding: 42px 0 49px;
+
+  .certificateImg {
+    object-fit: cover;
+    object-position: center;
+
+    @media screen and (max-width: $width-tablet-narrow) {
+      width: 75% !important;
+      height: auto !important;
+    }
+    @media screen and (max-width: $width-mobile-wide) {
+      width: 100% !important;
+    }
+  }
+
+  @media screen and (max-width: $width-desk-wide) {
+    justify-content: center;
+  }
+}
+
+
+.controls {
+  @include flex(row, flex-end, flex-start);
+  padding-right: 20.11px;
+}

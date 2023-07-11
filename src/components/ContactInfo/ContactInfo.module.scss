@@ -1,0 +1,61 @@
+@import "styles/global";
+
+.wrapper {
+  margin: 3px auto 112px auto;
+
+  .info {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+
+    padding-top: 60px;
+
+    .address {
+      @include flex(column, flex-start, flex-start);
+      margin: 30px 0 47px;
+
+      span:nth-child(1) {
+        @include bold-text(18px, normal, $color-text);
+      }
+
+      span:nth-child(2) {
+        @include light-text(18px, normal, $color-text);
+      }
+    }
+
+    .phone {
+      @include bold-text(18px, normal, $color-text);
+    }
+
+    .email {
+      @include light-text(16px, normal, $color-text);
+      margin: 52px 0 32px;
+    }
+
+    .map {
+      position: absolute;
+      top: 0;
+      left: calc(100% + 34px);
+      width: 54.29vw;
+      max-width: 790px;
+      height: 501px;
+
+      @media screen and (max-width: 1170px) {
+        width: 100vw;
+        max-width: calc(98vw - 34px - 406px);
+      }
+      @media screen and (max-width: $width-desk-narrow) {
+        max-width: calc(98vw - 34px - 293px);
+      }
+      @media screen and (max-width: $width-tablet-narrow) {
+        top: calc(100% + 34px);
+        left: 0;
+        max-width: 96vw;
+      }
+    }
+
+    @media screen and (max-width: $width-tablet-narrow) {
+      margin-bottom: 535px;
+    }
+  }
+}

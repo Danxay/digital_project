@@ -1,0 +1,18 @@
+@import 'styles/global';
+
+.wrapper {
+  position: relative;
+  z-index: 3;
+  padding: 29.14px 0;
+
+  .content {
+    @include flex(row, space-between, start);
+
+    .logo {
+      width: 70px;
+      height: 43.71px;
+
+      z-index: 1;
+    }
+  }
+}

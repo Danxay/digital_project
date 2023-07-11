@@ -1,0 +1,36 @@
+@import 'styles/global';
+
+.wrapper {
+  display: inline-flex;
+  gap: 22.98px;
+
+  .prevBtn {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .prevBtn,
+  .nextBtn {
+    @include flex(row, center, center);
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+    padding: 14px 12.95px 13px 14px;
+
+    background-color: $color-white;
+    border: 1px solid $color-border;
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $color-background-button;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

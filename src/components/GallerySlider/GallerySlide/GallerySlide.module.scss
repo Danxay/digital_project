@@ -1,0 +1,14 @@
+@import "styles/global";
+
+.images {
+  @include flex(row, flex-start, flex-start);
+  gap: 30px;
+  flex-wrap: wrap;
+
+  margin-bottom: 60px;
+
+  @media screen and (max-width: $width-desk-wide) {
+    justify-content: center;
+  }
+}
+

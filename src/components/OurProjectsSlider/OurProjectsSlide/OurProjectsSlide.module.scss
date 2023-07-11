@@ -1,0 +1,8 @@
+@import "styles/global";
+
+.cards {
+  @include flex(column, flex-start, center);
+  gap: 60px;
+
+  margin-bottom: 60px;
+}

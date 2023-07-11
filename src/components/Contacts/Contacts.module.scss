@@ -1,0 +1,33 @@
+@import 'styles/global';
+
+.content {
+  margin: 120px auto;
+
+  .title {
+    @include light-text(64px, 64px, $color-subtext);
+    margin-bottom: 22px;
+  }
+
+  .formWrapper {
+    @include flex(row, space-between, flex-start);
+
+    gap: 30px;
+
+    .img {
+      width: 100%;
+      max-width: 749px;
+      height: 369px;
+
+      background-position: center;
+      background-size: cover;
+
+      @media screen and (max-width: $width-tablet-wide) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: $width-tablet-wide) {
+      justify-content: center;
+    }
+  }
+}

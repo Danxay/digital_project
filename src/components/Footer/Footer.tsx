@@ -26,27 +26,27 @@ export const Footer: FC = () => {
           <h2 className={styles.subtitle}>Информация</h2>
           <ul className={styles.navList}>
             <li>
-              <Link href={'#'} className={styles.link}>
+              <Link href={'/'} className={styles.link}>
                 Главная
               </Link>
             </li>
             <li>
-              <Link href={'#'} className={styles.link}>
+              <Link href={'/gallery'} className={styles.link}>
                 Галерея
               </Link>
             </li>
             <li>
-              <Link href={'#'} className={styles.link}>
+              <Link href={'/projects'} className={styles.link}>
                 Проекты
               </Link>
             </li>
             <li>
-              <Link href={'#'} className={styles.link}>
+              <Link href={'/certificates'} className={styles.link}>
                 Сертификаты
               </Link>
             </li>
             <li>
-              <Link href={'#'} className={styles.link}>
+              <Link href={'/contacts'} className={styles.link}>
                 Контакты
               </Link>
             </li>
@@ -55,33 +55,33 @@ export const Footer: FC = () => {
         <address className={styles.address}>
           <h2 className={styles.subtitle}>Контакты</h2>
           <div className={styles.contacts}>
-            <Link href={'#'} className={cn(styles.link, styles.contact)}>
+            <Link href={'/contacts'} className={cn(styles.link, styles.contact)}>
               <TargetIcon />
-              100000, Республика Казахстан, г. Караганда, ул. Телевизионная 10
+              США, г. Сан-Франциско , ул. Кларендон авеню
             </Link>
-            <Link href={'#'} className={cn(styles.link, styles.contact)}>
+            <Link href={'tel:+7-800-555-35-35'} className={cn(styles.link, styles.contact)}>
               <PhoneIcon />
-              +7 (701) 77 76 811
+              +7 800 555 35 35
             </Link>
-            <Link href={'#'} className={cn(styles.link, styles.contact)}>
+            <Link href={'mailto:dan.dryagin@gmail.com'} className={cn(styles.link, styles.contact)}>
               <MailIcon />
-              Galym.sultanov@mail.ru
+              dan.dryagin@gmail.com
             </Link>
           </div>
         </address>
         <div className={styles.socials}>
           <h2 className={styles.subtitle}>Социальные сети</h2>
           <div className={styles.links}>
-            <Link href={'#'} className={styles.icon}>
+            <Link href={'https://www.facebook.com/'} className={styles.icon}>
               <FacebookIcon />
             </Link>
-            <Link href={'#'} className={styles.icon}>
+            <Link href={'https://twitter.com/'} className={styles.icon}>
               <TwitterIcon />
             </Link>
-            <Link href={'#'} className={styles.icon}>
+            <Link href={'https://www.linkedin.com/'} className={styles.icon}>
               <LinkedInIcon />
             </Link>
-            <Link href={'#'} className={styles.icon}>
+            <Link href={'https://www.pinterest.com/'} className={styles.icon}>
               <PinterestIcon />
             </Link>
           </div>

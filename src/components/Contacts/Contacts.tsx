@@ -10,7 +10,7 @@ import picture from '@images/contacts_picture.webp';
 
 export const Contacts: FC = () => {
   return (
-    <section className={cn('container', styles.content)}>
+    <section className={cn('container', styles.content)} id={'contacts'}>
       <h1 className={cn(styles.title, 'titleAdaptive')}>Связаться с нами</h1>
       <div className={styles.formWrapper}>
         <ContactsForm />

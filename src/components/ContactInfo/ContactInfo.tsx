@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import Link from 'next/link';
 import { FC } from 'react';
 
 import styles from './ContactInfo.module.scss';
@@ -16,16 +15,16 @@ export const ContactInfo: FC = () => {
         <DoubleTitle first={'КОНТАКТНАЯ'} second={'ИНФОРМАЦИЯ'} />
         <p className={styles.address}>
           <span>«Digital Project»</span>
-          <span>г. Караганда, ул. Телевизионная 10</span>
+          <span>г. Сан-Франциско , ул. Кларендон авеню</span>
         </p>
-        <Link href={'#'} className={styles.phone}>
-          +7 (701) 77 76 811
-        </Link>
-        <Link href={'#'} className={styles.email}>
-          Galym.sultanov@mail.ru
-        </Link>
+        <a href={'tel:+7-800-555-35-35'} className={styles.phone}>
+          +7 800 555 35 35
+        </a>
+        <a href={'mailto:dan.dryagin@gmail.com'} className={styles.email}>
+          dan.dryagin@gmail.com
+        </a>
         <div>
-          <Button text={'Обратная связь'} theme={'dark'} link={'#'} arrow={false} />
+          <Button text={'Обратная связь'} theme={'dark'} link={'/#contacts'} arrow={false} />
         </div>
         <div className={styles.map}>
           <ContactInfoMap />

@@ -17,10 +17,10 @@ export const AboutCompany: React.FC = () => {
       <div className={styles.info}>
         <h1 className={cn(styles.title, 'titleAdaptive')}>О компании</h1>
         <p className={styles.text}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged.
+          Наша компания - это команда профессиональных архитекторов и строителей, которые создают качественные и
+          современные объекты. Мы работаем с разными типами зданий: жилые, коммерческие, общественные, культурные и
+          другие. Мы учитываем все пожелания наших клиентов и предлагаем индивидуальные решения для каждого проекта.
+          Наша цель - сделать мир красивее и удобнее с помощью архитектуры.
         </p>
         <Button text={'ЧИТАТЬ'} link={'/'} theme={'light'} />
       </div>

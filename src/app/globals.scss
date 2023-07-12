@@ -7,6 +7,17 @@
   border: none;
 }
 
+a {
+  display: inline-flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  pointer-events: none;
+  display: block;
+}
+
 body {
   background-color: $color-white;
 
@@ -14,15 +25,13 @@ body {
     overflow: hidden;
   }
 
-  a {
-    display: inline-flex;
-    color: inherit;
-    text-decoration: none;
+  &::-webkit-scrollbar {
+    width: 8px;
   }
 
-  img {
-    pointer-events: none;
-    display: block;
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-subtext;
+    border-radius: 50px;
   }
 }
 

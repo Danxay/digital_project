@@ -5,8 +5,6 @@ import { FC } from 'react';
 
 import styles from './ContactInfoMap.module.scss';
 
-import geomarker from '@images/geomarker.webp';
-
 export const ContactInfoMap: FC = () => {
   return (
     <YMaps>
@@ -27,7 +25,7 @@ export const ContactInfoMap: FC = () => {
           options={{
             iconLayout: 'default#image',
             iconImageSize: [55, 55],
-            iconImageHref: geomarker.src,
+            iconImageHref: '/icons/geomarker.svg',
           }}
         />
       </Map>

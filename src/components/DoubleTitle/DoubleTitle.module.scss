@@ -9,7 +9,7 @@
     @include light-text(64px, 64px, $color-subtext);
   }
 
-  span:nth-child(2) {
+  b:nth-child(2) {
     @include bold-text(64px, 64px, $color-text);
   }
 }

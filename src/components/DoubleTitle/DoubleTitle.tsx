@@ -11,7 +11,7 @@ export const DoubleTitle: FC<IDoubleTitleProps> = ({ first, second }) => {
   return (
     <h1 className={styles.title}>
       <span className={'titleAdaptive'}>{first}</span>
-      {second && <span className={'titleAdaptive'}>{second}</span>}
+      {second && <b className={'titleAdaptive'}>{second}</b>}
     </h1>
   );
 };

@@ -11,7 +11,6 @@ const nextConfig = {
   images: {
     domains: [new URL(process.env.NEXT_PUBLIC_URL).hostname],
   },
-  // profiler: true,
 };
 
 module.exports = nextConfig;

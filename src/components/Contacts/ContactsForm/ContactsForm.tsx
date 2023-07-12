@@ -30,7 +30,7 @@ export const ContactsForm: FC = () => {
       message: Yup.string().required('Это поле обязательное'),
       dataTreat: Yup.boolean().oneOf([true], 'Необходимо согласие с политикой конфиденциальности'),
     }),
-    onSubmit: async (values, { setSubmitting }) => {
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
       setSubmitting(true);
 
       await new Promise((resolve) => {
@@ -40,6 +40,7 @@ export const ContactsForm: FC = () => {
       });
 
       setSubmitting(false);
+      resetForm();
     },
   });
 
